@@ -1,9 +1,14 @@
 package com.wx.usercenter;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * 第一次推送
+ */
 @SpringBootApplication
+@MapperScan("com.wx.usercenter.mapper")
 public class UserCenterApplication {
 
     public static void main(String[] args) {

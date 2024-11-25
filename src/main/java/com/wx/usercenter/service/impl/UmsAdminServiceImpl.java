@@ -55,6 +55,7 @@ public class UmsAdminServiceImpl extends ServiceImpl<UmsAdminMapper, UmsAdmin>
         if (!saveResult){
             return -1;
         }
+
         return umsAdmin.getId();
     }
 }
