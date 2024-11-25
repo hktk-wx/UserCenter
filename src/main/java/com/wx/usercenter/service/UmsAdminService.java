@@ -2,6 +2,9 @@ package com.wx.usercenter.service;
 
 import com.wx.usercenter.model.domain.UmsAdmin;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.wx.usercenter.model.vo.LoginUserVO;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
 * @author HP
@@ -11,4 +14,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
 public interface UmsAdminService extends IService<UmsAdmin> {
 
     long register(String username,String password,String checkPassword);
+
+    LoginUserVO userLogin(String userAccount, String userPassword, HttpServletRequest request);
+
+    LoginUserVO getLoginUserVO(UmsAdmin umsAdmin);
 }

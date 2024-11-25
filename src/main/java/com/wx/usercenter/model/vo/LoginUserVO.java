@@ -1,22 +1,22 @@
-package com.wx.usercenter.model.domain;
+package com.wx.usercenter.model.vo;
 
-import com.baomidou.mybatisplus.annotation.*;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import lombok.Data;
 
 import java.io.Serializable;
 import java.util.Date;
-import lombok.Data;
 
 /**
- * 后台用户表
- * @TableName ums_admin
- */
-@TableName(value ="ums_admin")
+ * 已登录用户视图（脱敏）
+ *
+ **/
 @Data
-public class UmsAdmin implements Serializable {
+public class LoginUserVO implements Serializable {
+
     /**
      *
      */
-    @TableId(type = IdType.AUTO)
     private Long id;
 
     /**
@@ -24,10 +24,6 @@ public class UmsAdmin implements Serializable {
      */
     private String username;
 
-    /**
-     *密码
-     */
-    private String password;
 
     /**
      * 头像
@@ -64,12 +60,5 @@ public class UmsAdmin implements Serializable {
      */
     private Integer status;
 
-    /**
-     * 逻辑删除
-     */
-    @TableLogic
-    private String deleted;
-
-    @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }
